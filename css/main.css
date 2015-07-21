@@ -3,36 +3,32 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #747704;
 }
 
-.title-super{
+.title-super {
   font-weight: 300;
   font-size: 48px;
 }
-.title-logo{
+
+.title-logo {
   margin-top: 10px;
 }
-.text-muted{
-  color: #BCBBBB;
+
+.text-muted {
+  color: #bcbbbb;
 }
 
 hr {
   border: none;
   height: 5px;
   color: #669999;
-  background-color: #BCBBBB;
-}
-
-@media only screen and (max-width: 300px){
-  p{
-    background-color: blue;
-  }
+  background-color: #bcbbbb;
 }
