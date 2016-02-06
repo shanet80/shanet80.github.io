@@ -72,9 +72,24 @@
         </ul>
       </div>
     </div>
+
+    <!-- Loads map once googlemaps api loaded -->
+    <script>
+      function initMap() {
+        // this function will be called when the google maps api is loaded
+        var script = document.createElement("script");
+        script.src = "js/app.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+      function googleError() {
+        // and this will be called when there was an error
+        $('#map-canvas').html('We had trouble loading Google Maps. Please refresh your browser and try again.');
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
-    <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script async defer
+      src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyATFOZsI-PlR5F_N2S60wPs-1ishYuTflU&callback=initMap"
+      onerror="googleError()"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+    <script src="js/jquery.autocomplete.js"></script>
   </body>
